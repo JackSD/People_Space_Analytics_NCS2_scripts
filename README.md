@@ -15,7 +15,9 @@ setupvars.bat
 
 cd Users\jack\Documents\openvino\final_project
 py object_detection_demo_ssd_async.py -m person-detection-retail-0013.xml -i CAM -d MOVIDIUS
+
 py people_object_detection_draw_on_frame.py -m person-detection-retail-0013.xml -i CAM -d MOVIDIUS
+
 py people_object_detection_people_trackingc.py -m person-detection-retail-0013.xml -i CAM -d MOVIDIUS
 
 -i controls the input, there are sample vidoes included -i retail1.mp3 and -d CPU is an optional also to control the device
@@ -26,9 +28,9 @@ py people_object_detection_people_trackingc.py -m person-detection-retail-0013.x
 
 **people_object_detection_draw_on_frames.py** - this file draws the data being inferred from the model on some frames which are in turn displayed to the user. 
 
-It also rtecords overcrowding alerts (an earlier iteration of the project) where the number of people exceeds a threshold.
+**people_object_detection_people_tracking.py -** this file records in a PSQL database the number of people in the frame every 100 frames.
 
-**people_object_detection_people_tracking.py -** this file records in a PSQL database the number of people in the frame every 100 frames. 
+It also records overcrowding alerts (an earlier iteration of the project) where the number of people exceeds a threshold in a remote PSQ database.
 
 **object_detection_demo_ssd_async.py** - this is the original file provided with the openvino toolkit which was adapted
 
