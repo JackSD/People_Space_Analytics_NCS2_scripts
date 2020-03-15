@@ -4,7 +4,7 @@ import psycopg2
 
 def send_data( num_people, allowable_people):
     connection = psycopg2.connect(user="postgres",
-                                  password="petra",
+                                  password="xx",
                                   host="35.205.119.160",
                                   port="5432",
                                   database="computer-vision-project")
@@ -33,7 +33,7 @@ def send_data( num_people, allowable_people):
 
 def send_coordinates( x,y,height):
     connection = psycopg2.connect(user="postgres",
-                                  password="petra",
+                                  password="xx",
                                   host="35.205.119.160",
                                   port="5432",
                                   database="computer-vision-project")
